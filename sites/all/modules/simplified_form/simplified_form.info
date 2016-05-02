@@ -1,0 +1,4 @@
+name = Simplified Form
+description = Remove checkbox for sending a copy to yourself.
+package = Custom
+core = 7.x

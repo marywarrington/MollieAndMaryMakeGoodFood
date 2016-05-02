@@ -1,0 +1,8 @@
+<?php
+
+function simplified_form_form_alter(&$form, &$form_state, $form_id) {
+    print_r("HEY");
+    if($form_id == 'contact_site_form') {
+        $form['copy']['#access'] = 0;
+    }
+}
