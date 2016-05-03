@@ -1,0 +1,18 @@
+<?php
+
+function custom_recipe_form_alter(&$form, &$form_state, $form_id) {
+    global $user;
+    if (in_array('contributor', $user->roles)) {
+        if ($form_id == 'recipe_node_form') {
+            //     print '<pre>';
+            //     print_r($form);
+            //     print '</pre>';
+            $form['revision_information']['#type'] = 'hidden';
+            $form['author']['#type'] = 'hidden';
+            $form['options']['#type'] = 'hidden';
+            $form['additional_settings']['#type'] = 'hidden';
+            $form['comment_settings']['#type'] = 'hidden';
+            // $form['revision_information']['#type'] = 'hidden';
+        }
+    }
+}

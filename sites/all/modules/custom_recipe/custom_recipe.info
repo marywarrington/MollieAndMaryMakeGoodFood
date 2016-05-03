@@ -1,0 +1,5 @@
+name = Custom Recipe
+description = customize view
+package = Custom
+core = 7.x
+files[] = custom_recipe.module
